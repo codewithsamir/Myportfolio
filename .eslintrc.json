@@ -1,6 +1,7 @@
 {
   "extends": "next/core-web-vitals",
   "rules": {
-    "no-unused-vars": "off" // Disables the unused variables rule
+
+    "react/no-unescaped-entities": "off" // Allows apostrophes (') and other unescaped characters
   }
 }

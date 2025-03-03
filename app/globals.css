@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Base colors (Updated from Image) */
+    --background: 220 40% 15%; /* Dark Blue - Extracted */
+    --foreground: 210 20% 90%; /* Light Cyan for text - Extracted */
+
+    /* Primary - Deep Blue */
+    --primary: 220 100% 40%; /* Updated Primary (Brighter Blue) */
+    --primary-foreground: 0 0% 100%; /* White */
+
+    /* Secondary - Cyan */
+    --secondary: 190 100% 50%; /* Cyan shade */
+    --secondary-foreground: 0 0% 100%; /* White */
+
+    /* Accent - Dark Teal */
+    --accent: 180 60% 30%; /* Dark Teal */
+    --accent-foreground: 0 0% 100%; /* White */
+
+    /* Other UI elements */
+    --card: 220 40% 10%; /* Dark Background */
+    --card-foreground: 210 20% 90%; /* Light Cyan Text */
+    --popover: 220 40% 10%;
+    --popover-foreground: 210 20% 90%;
+    --muted: 220 10% 30%;
+    --muted-foreground: 220 10% 60%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 20% 50%; /* Adjusted border color */
+    --input: 220 20% 60%;
+    --ring: 220 100% 40%; /* Brighter Blue */
+    --radius: 0.75rem;
+
+    /* Gradient Adjustments */
+    --gradient-primary: hsl(220, 100%, 40%), hsl(190, 100%, 50%),
+      hsl(180, 60%, 30%);
+    --gradient-secondary: hsl(220, 40%, 10%), hsl(210, 20%, 90%);
+  }
+
+  .dark {
+    --background: 220 60% 10%; /* Slightly Darker for Dark Mode */
+    --foreground: 210 20% 95%; /* Lighter Text */
+    --card: 220 40% 10%;
+    --card-foreground: 210 20% 95%;
+    --popover: 220 40% 10%;
+    --popover-foreground: 210 20% 95%;
+    --primary: 220 100% 40%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 190 100% 50%;
+    --secondary-foreground: 0 0% 100%;
+    --muted: 220 60% 15%;  /* Darker Background*/
+    --muted-foreground: 220 10% 50%;
+    --accent: 180 60% 25%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 220 20% 40%;
+    --input: 220 20% 50%;
+    --ring: 220 100% 40%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  html {
+    @apply size-full scroll-smooth;
+  }
+  body {
+    @apply bg-background text-foreground size-full overflow-hidden;
+  }
+  .text-gradient-primary {
+    @apply bg-gradient-primary text-transparent bg-clip-text;
+  }
+  .text-gradient-secondary {
+    @apply bg-gradient-secondary text-transparent bg-clip-text;
+  }
+}
+
+.perspective-1000 {
+  perspective: 1000px;
+}

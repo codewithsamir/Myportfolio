@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 
 export default function AboutSection() {
   const ref = useRef(null);
-  useCurSection(ref);
+  useCurSection(ref,0.4);
   return (
     <div
       ref={ref}

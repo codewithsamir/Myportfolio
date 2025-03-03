@@ -7,10 +7,12 @@ import { useRef } from "react";
 import data from "@/data";
 import Link from "next/link";
 import CodeTyping from "./code-typing";
+import useCurSection from "@/hooks/use-cur-section";
 
 export default function HomeSection() {
   const router = useRouter();
   const ref = useRef(null);
+  useCurSection(ref,0.05);
 
   return (
     <section

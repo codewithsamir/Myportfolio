@@ -14,9 +14,10 @@ const data = {
         link: "https://github.com/CodeWithSamir", // Update with your GitHub link
         icon: Github,
       },
+
       {
         name: "linkedin",
-        link: "https://www.linkedin.com/in/codewithsamir/", // Update with your LinkedIn link
+        link: "https://www.linkedin.com/in/samir-rain-0467b7259", // Update with your LinkedIn link
         icon: Linkedin,
       },
       {
@@ -29,13 +30,13 @@ const data = {
   projects: {
     projects: [
       {
-        id: 1,
-        title: "YouTube Clone",
-        description:
-          "A fully functional YouTube clone featuring video uploads, streaming, and user authentication. Technologies Used: Next.js, React.js, Tailwind CSS, Firebase.",
-        image: "/projects-imgs/youtube-clone.png",
-        previewLink: "https://youtube-clone.example.com",
-      },
+        "id": 1,
+        "title": "Online Job Portal",
+        "description": "A modern job portal where users can search, apply for jobs, and post job listings. Features include authentication, job filtering, and real-time updates. Technologies Used: Next.js, React.js, Tailwind CSS, Appwrite, ShadCN.",
+        "image": "/projects-imgs/online-job-portal.png",
+        "previewLink": "https://online-job-platform.vercel.app/"
+      }
+,      
       {
         id: 2,
         title: "E-commerce Website",

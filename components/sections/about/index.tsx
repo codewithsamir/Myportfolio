@@ -56,7 +56,7 @@ export default function AboutSection() {
             transition={{ delay: 0.7, ease: "easeIn", duration: 0.5 }}
             className="text-muted-foreground text-justify"
           >
-            Hey, I’m Samir, a web and mobile app developer with expertise in
+            Hey, I&apos;m Samir, a web and mobile app developer with expertise in
             React, Next.js, React Native, Django, and various other technologies.
             I specialize in building and optimizing high-performance web and mobile
             applications. If you need a fast, scalable, and maintainable app, I'm
@@ -65,20 +65,20 @@ export default function AboutSection() {
             <br />
             <span className="font-semibold">📌 What I Do Best:</span>
             <br />
-            ✅ Full-Stack Web Development – From front-end to back-end with
+            ✅ Full-Stack Web Development &ndash; From front-end to back-end with
             React, Next.js, Django, and Node.js.
             <br />
-            ✅ Mobile App Development – Crafting beautiful, native-like experiences
+            ✅ Mobile App Development &ndash; Crafting beautiful, native-like experiences
             with React Native.
             <br />
-            ✅ Performance Optimization – Speeding up apps and improving SEO to
+            ✅ Performance Optimization &ndash; Speeding up apps and improving SEO to
             provide a seamless user experience.
             <br />
-            ✅ Building Scalable Web Applications – Ensuring your app grows without
+            ✅ Building Scalable Web Applications &ndash; Ensuring your app grows without
             facing performance issues.
             <br />
-            ✅ AI Features & Automation – Leveraging AI technologies to enhance
-            your app’s features and automate processes.
+            ✅ AI Features & Automation &ndash; Leveraging AI technologies to enhance
+            your app&apos;s features and automate processes.
             <br />
             <br />
             <span className="font-semibold">📌 Why Work With Me?</span>
@@ -95,8 +95,8 @@ export default function AboutSection() {
             <br />
             <span className="font-semibold">📌 Let&apos;s Talk</span>
             <br />
-            Whether you’re looking for help building a new app, optimizing an
-            existing one, or adding new features, I’m here to assist.
+            Whether you&apos;re looking for help building a new app, optimizing an
+            existing one, or adding new features, I&apos;m here to assist.
             <br />
             <a href="#contact" className="text-primary hover:underline">
               ✅ Get in Touch

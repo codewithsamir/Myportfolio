@@ -27,17 +27,21 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "Samir Rain" }],
   creator: "Samir Rain",
+  metadataBase: new URL("https://samirrain.com.np"),
+  verification: {
+    google: "Geg6MyqELKWvjbsABit5WRiVwZ9ua-TMkbRUObCVSIA",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://codewithsamir.com", // Replace with your actual website link
+    url: "https://samirrain.com.np",
     siteName: "Samir Rain Portfolio",
     title: "Samir Rain | Next.js & React Developer | Full Stack Developer",
     description:
       "Full Stack Developer specializing in Next.js, React, Django, and mobile app development. Building high-performance web and mobile applications.",
     images: [
       {
-        url: "/imgs/website.png", // Update with your image path
+        url: "/imgs/website.png",
         width: 1200,
         height: 630,
         alt: "Samir Rain - Next.js & React Developer",
@@ -49,8 +53,8 @@ export const metadata: Metadata = {
     title: "Samir Rain | Next.js & React Developer | Full Stack Developer",
     description:
       "Full Stack Developer specializing in Next.js, React, Django, and mobile app development",
-    images: ["/imgs/website.png"], // Update with your image path
-    creator: "@CodeWithSamir", // Your Twitter handle
+    images: ["/imgs/website.png"],
+    creator: "@CodeWithSamir",
   },
   robots: {
     index: true,
@@ -64,11 +68,38 @@ export const metadata: Metadata = {
     },
   },
   alternates: {
-    canonical: "https://codewithsamir.com", // Your website URL
+    canonical: "https://samirrain.com.np",
+    // You can add more alternate portfolio URLs here if needed
+    types: {
+      "text/html": [
+        "https://samirrain.github.io/",
+        "https://codewithsamir.github.io/",
+      ],
+    },
   },
   icons: {
-    icon: "/imgs/logo.png", // Your logo path
-    apple: "/imgs/logo.png", // Your logo path
+    icon: "/imgs/logo.png",
+    apple: "/imgs/logo.png",
+  },
+  viewport: "width=device-width, initial-scale=1",
+  themeColor: "#000000",
+  applicationName: "Samir Rain Portfolio",
+  formatDetection: {
+    telephone: false,
+    email: false,
+    address: false,
+  },
+  // Social Profiles (not a standard Metadata field, but useful for reference)
+  profiles: {
+    linkedin: "https://np.linkedin.com/in/samir-rain-0467b7259",
+    facebook: "https://www.facebook.com/TEAMOFSAMIR/",
+    instagram: "https://www.instagram.com/teamofsamir/",
+    youtube: "https://www.youtube.com/@codewithsamir",
+    github: "https://github.com/codewithsamir",
+    portfolio: [
+      "https://samirrain.github.io/",
+      "https://codewithsamir.github.io/",
+    ],
   },
 };
 
@@ -79,7 +110,9 @@ export default function RootLayout({
 }>) {
   return (
     <html className="dark" lang="en">
-      <body className={firaCode.className}>{children}</body>
+      <body className={firaCode.className}>
+        {children}
+      </body>
     </html>
   );
 }

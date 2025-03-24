@@ -1,8 +1,19 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
+import Head from "next/head";
 import "./globals.css";
 
 const firaCode = Fira_Code({ subsets: ["latin"] });
+
+// Define profiles outside of metadata
+ const profiles = {
+  linkedin: "https://np.linkedin.com/in/samir-rain-0467b7259",
+  facebook: "https://www.facebook.com/TEAMOFSAMIR/",
+  instagram: "https://www.instagram.com/teamofsamir/",
+  youtube: "https://www.youtube.com/@codewithsamir",
+  github: "https://github.com/codewithsamir",
+  portfolio: ["https://samirrain.github.io/", "https://codewithsamir.github.io/"],
+};
 
 export const metadata: Metadata = {
   title: {
@@ -69,13 +80,6 @@ export const metadata: Metadata = {
   },
   alternates: {
     canonical: "https://samirrain.com.np",
-    // You can add more alternate portfolio URLs here if needed
-    types: {
-      "text/html": [
-        "https://samirrain.github.io/",
-        "https://codewithsamir.github.io/",
-      ],
-    },
   },
   icons: {
     icon: "/imgs/logo.png",
@@ -89,18 +93,6 @@ export const metadata: Metadata = {
     email: false,
     address: false,
   },
-  // Social Profiles (not a standard Metadata field, but useful for reference)
-  profiles: {
-    linkedin: "https://np.linkedin.com/in/samir-rain-0467b7259",
-    facebook: "https://www.facebook.com/TEAMOFSAMIR/",
-    instagram: "https://www.instagram.com/teamofsamir/",
-    youtube: "https://www.youtube.com/@codewithsamir",
-    github: "https://github.com/codewithsamir",
-    portfolio: [
-      "https://samirrain.github.io/",
-      "https://codewithsamir.github.io/",
-    ],
-  },
 };
 
 export default function RootLayout({
@@ -110,9 +102,19 @@ export default function RootLayout({
 }>) {
   return (
     <html className="dark" lang="en">
-      <body className={firaCode.className}>
-        {children}
-      </body>
+      <Head>
+        {/* Alternate portfolio sites */}
+        <link rel="alternate" href="https://samirrain.github.io/" />
+        <link rel="alternate" href="https://codewithsamir.github.io/" />
+        <link rel="manifest" href="/manifest.json" />
+        {/* Social profiles as Open Graph see_also */}
+        <meta property="og:see_also" content={profiles.linkedin} />
+        <meta property="og:see_also" content={profiles.facebook} />
+        <meta property="og:see_also" content={profiles.instagram} />
+        <meta property="og:see_also" content={profiles.youtube} />
+        <meta property="og:see_also" content={profiles.github} />
+      </Head>
+      <body className={firaCode.className}>{children}</body>
     </html>
   );
 }

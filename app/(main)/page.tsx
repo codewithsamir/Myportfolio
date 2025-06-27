@@ -1,3 +1,4 @@
+import React from "react";
 import LoadingScreen from "@/components/loading-screen";
 import AboutSection from "@/components/sections/about";
 import ContactSection from "@/components/sections/contact";

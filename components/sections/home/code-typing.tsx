@@ -8,22 +8,32 @@ const defaultProps = {
 };
 
 const codeSnippet = `// Welcome to my AI-Powered Portfolio! 🚀
-import { NextDeveloper } from 'samirrain';
-import { AIExpertise } from '@/skills';
+import { FullStackDeveloper } from 'codewithsamir';
+import { Skills, Services } from '@/profile';
 
-function createAmazingWebsite() {
+function buildAwesomeProjects() {
   const mySkills = {
-    webDev: ["Next.js", "React", "TS"],
-    aiTools: ["ChatGPT", "ML"],
-    passion: "Building AI web apps"
+    frontend: ["Next.js", "React.js", "Remix", "Tailwind CSS"],
+    backend: ["Node.js", "Express.js", "NestJS", "MongoDB"],
+    extras: ["REST API", "JWT Auth", "Socket.io", "GraphQL (basic)"],
+    aiTools: ["OpenAI API", "ChatGPT Integrations"],
+    passion: "Building practical, modern full-stack & AI-powered web apps"
   };
 
   return {
-    message: "Let's work together!",
-    services: ["Web Apps", "AI Features",],
-    contact: "Scroll down to connect →"
+    message: "Let's build something amazing together! 💻✨",
+    services: [
+      "Full-Stack Web Apps",
+      "Custom REST/GraphQL APIs",
+      "Real-Time Features",
+      "AI Chatbots & Integrations",
+      "Backend Architecture (NestJS)"
+    ],
+    contact: "Scroll down or email me to get started →"
   };
-};`;
+};
+`;
+
 
 export default function CodeTyping() {
   const [displayedLines, setDisplayedLines] = useState<string[]>(
@@ -58,7 +68,7 @@ export default function CodeTyping() {
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="rounded-lg bg-muted p-4 w-full max-w-[450px] font-mono max-[400px]:text-[0.6rem] text-xs sm:text-sm overflow-hidden shadow-lg justify-self-center"
+      className="rounded-lg bg-muted p-4 w-full max-w-[500px] font-mono max-[400px]:text-[0.6rem] text-xs sm:text-sm overflow-hidden shadow-lg justify-self-center"
     >
       {/* Fake MacOS Window Buttons */}
       <div className="flex items-center gap-1.5 mb-3">
